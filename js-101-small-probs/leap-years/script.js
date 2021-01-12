@@ -2,7 +2,17 @@
 
 // Assume this rule is valid for any year greater than year 0. Write a function that takes any year greater than 0 as input, and returns true if the year is a leap year, or false if it is not a leap year.
 
+// This is a continuation of the previous exercise.
+
+// The British Empire adopted the Gregorian Calendar in 1752, which was a leap year. Prior to 1752, they used the Julian Calendar. Under the Julian Calendar, leap years occur in any year that is evenly divisible by 4.
+
+// Using this information, update the function from the previous exercise to determine leap years both before and after 1752.
+
 const isLeapYear = (year) => {
+  if (year < 1752 && year % 4 === 0) {
+    console.log(true);
+    return;
+  }
   //find leap years 1st
   if (year % 4 === 0 && year % 100 != 0) {
     console.log(true);
